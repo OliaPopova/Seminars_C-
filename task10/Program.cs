@@ -4,8 +4,6 @@
 // 782 -> 8
 // 918 -> 1
 
-
-Console.Clear();
 Console.WriteLine("Задача #10 ");
 Console.Write("Введи трёхзначное число: ");
 int a = Convert.ToInt32(Console.ReadLine());
