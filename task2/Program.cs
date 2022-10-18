@@ -5,7 +5,7 @@
 // a = -9 b = -3 -> max = -3
 
 
-Console.WriteLine("Задача #12 ");
+Console.WriteLine("Задача #2 ");
 
 Console.Write("Введи первое число: ");
 int a = Convert.ToInt32(Console.ReadLine());
