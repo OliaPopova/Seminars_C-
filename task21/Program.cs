@@ -7,27 +7,26 @@
 
 
 Console.WriteLine("Задача № 21");
-int x1 = Coordinate("x1", "A");
-int y1 = Coordinate("y1", "A");
-int z1 = Coordinate("z1", "A");
-int x2 = Coordinate("x2", "B");
-int y2 = Coordinate("y2", "B");
-int z2 = Coordinate("z2", "B");
+Console.WriteLine("Введите координату точки Х1 :");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату точки Х2 :");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату точки Y1 :");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату точки Y2 :");
+int y2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату точки Z1 :");
+int z1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координату точки Z2 :");
+int z2 = Convert.ToInt32(Console.ReadLine());
 
-int Coordinate(string coorName, string pointName)
-{
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
-    return Convert.ToInt16(Console.ReadLine());
+
+double distance=Distance(x1, x2, y1, y2, z1, z2);
+distance  =  Math.Round (distance , 2);
+
+double Distance(int x1, int x2, int y1, int y2, int z1, int z2){
+      double dist=Math.Sqrt(Math.Pow((x2-x1), 2) + Math.Pow((y2-y1), 2) + Math.Pow((z2-z1), 2));
+     return dist;
 }
 
-double Decision(double x1, double x2, 
-                double y1, double y2, 
-                double z1, double z2){
-  return Math.Sqrt(Math.Pow((x2-x1), 2) + 
-                   Math.Pow((y2-y1), 2) + 
-                   Math.Pow((z2-z1), 2));
-}
-
-double segmentLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
-
-Console.WriteLine($"А ({x1},{y1},{z1}) ; B ({x2},{y2},{z2}) -> {segmentLength}");
+Console.WriteLine($"А ({x1},{y1},{z1}) ; B ({x2},{y2},{z2}) -> {distance}");
