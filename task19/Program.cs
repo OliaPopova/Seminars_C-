@@ -12,20 +12,43 @@
 
 
 Console.WriteLine("Задача № 19");
-Console.Write("Введите число: ");
-string? number = Console.ReadLine();
+Console.Write("Введите ПЯТИЗНАЧНОЕ число: ");
+int num =Convert.ToInt32(Console.ReadLine());
 
-void CheckingNumber(string number){
-  if (number[0]==number[4] || number[1]==number[3]){
-    Console.WriteLine($" {number} -> да.");
+static bool IsPalindrom (int number)
+    {
+        int temp = number;
+        int value;
+        int numberRevers = 0;
+
+        while (temp > 0)
+        {
+            value = temp % 10;
+            numberRevers = numberRevers * 10 + value;
+            temp /= 10;
+        }
+
+        if (numberRevers == number)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+if (num > 9999 & num<=99999){
+  bool answer=IsPalindrom(num);
+  if(answer){
+    Console.WriteLine($"Палиндром!");
   }
-  else Console.WriteLine($"{number} -> нет.");
-}
+  else{
+    Console.WriteLine($"НЕ палиндром!");
+  }
 
-if (number!.Length == 5){
-  CheckingNumber(number);
 }
-else Console.WriteLine($"Введи правильное число");
+else Console.WriteLine($"Вы ввели НЕ ПЯТИЗНАЧНОЕ число!");
 
 
 
