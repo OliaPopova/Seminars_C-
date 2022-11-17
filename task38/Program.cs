@@ -5,6 +5,10 @@
 
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
+if(size<=0){
+    Console.Write("Введите число БОЛЬШЕ 0: ");
+    size = Convert.ToInt32(Console.ReadLine());
+}
 double[] numbers = new double[size];
 for(int i = 0; i < size; i++)
     {
