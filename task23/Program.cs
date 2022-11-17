@@ -10,28 +10,20 @@
 // 5 | 125
 
 Console.WriteLine("Задача № 23");
-Console.Write("Введите число : ");
+Console.WriteLine("Введите число : ");
 int cube = Convert.ToInt32(Console.ReadLine());
 
-void Cube(int[] cube){
-  int counter = 1;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
+void Table(int cube){
+  if(cube>0){
+    int index=1;
+    while(index<=cube){
+      Console.WriteLine($"{index} | {index*index*index}");
+      index++;
+    }
   }
+  else Console.WriteLine("Некорректное число");
 }
 
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 1;
-  while(index < count){
-    Console.Write( index + "|" + coll[index]+ " \n");
-    index++;
-  }
-} 
+Table(cube);
 
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
 
