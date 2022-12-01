@@ -27,6 +27,7 @@ void Fill_array(double[,] array)
     }
 }
 
+
 void Print_array(double[,] array)
 {
     for (int i = 0; i < n; i++)
