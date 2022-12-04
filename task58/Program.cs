@@ -14,7 +14,7 @@ int[,] matrixA = new int[n, n];
 int[,] matrixB = new int[n, n];
 
 
-void Fill_array(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -25,7 +25,7 @@ void Fill_array(int[,] array)
     }
 }
 
-void Print_array(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -40,8 +40,8 @@ void Print_array(int[,] array)
 }
 
 
-Fill_array(matrixA);
-Fill_array(matrixB);
+FillArray(matrixA);
+FillArray(matrixB);
 int[,] matrixC = new int[n, n];
 
 void Multiplication(int[,] matrixA, int[,] matrixB)
@@ -57,14 +57,14 @@ void Multiplication(int[,] matrixA, int[,] matrixB)
         }
     }
     Console.WriteLine("Произведение матриц А*В");
-    Print_array(matrixC);
+    PrintArray(matrixC);
 
 }
 Console.WriteLine("Матрица - А");
-Print_array(matrixA);
+PrintArray(matrixA);
 Console.WriteLine();
 Console.WriteLine("Матрица - В");
-Print_array(matrixB);
+PrintArray(matrixB);
 Console.WriteLine();
 
 Multiplication(matrixA, matrixB);
