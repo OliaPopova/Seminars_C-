@@ -7,6 +7,7 @@
 Console.WriteLine("Введите размеры массива через пробел: ");
 string[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
 int[,,] array = GetArray(new int[] { int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2]), }, 10, 99);
+
 PrintArray(array);
 
 int[,,] GetArray(int[] sizes, int min, int max)
@@ -28,7 +29,6 @@ int[,,] GetArray(int[] sizes, int min, int max)
     }
     return result;
 }
-
 
 bool FindElement(int[,,] array, int el)
 {
