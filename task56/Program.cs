@@ -18,8 +18,8 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[n, m];
-Fill_array(array);
-Print_array(array);
+FillArray(array);
+PrintArray(array);
 foo(array);
 
 
@@ -45,7 +45,7 @@ void foo(int[,] array)
 
 
 
-void Fill_array(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -56,7 +56,7 @@ void Fill_array(int[,] array)
     }
 }
 
-void Print_array(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
