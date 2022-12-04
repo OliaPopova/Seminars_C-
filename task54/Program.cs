@@ -14,9 +14,9 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[n, m];
-Fill_array(array);
+FillArray(array);
 Console.WriteLine();
-Print_array(array);
+PrintArray(array);
 
 for (int i = 0; i < array.GetLength(0); i++)
 {
@@ -36,9 +36,9 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 Console.WriteLine();
 Console.WriteLine("Массив с упорядоченными значениями");
-Print_array(array);
+PrintArray(array);
 
-void Fill_array(int[,] array)
+void FillArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -49,7 +49,7 @@ void Fill_array(int[,] array)
     }
 }
 
-void Print_array(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
