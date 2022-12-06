@@ -2,7 +2,8 @@
 
 string[] myArray1 = new string[6] {"hello","!","67543", "world", "22", "foo"};
 
-string[] ElementsSelection(string[] myArray1){
+
+int CountFunc(string[] myArray1){
     int count = 0;
     for (int i = 0; i < myArray1.Length; i++)
     {
@@ -11,6 +12,13 @@ string[] ElementsSelection(string[] myArray1){
         count++;
         }
     }
+    return count;
+}
+
+
+
+string[] ElementsSelection(string[] myArray1, int count){
+    
     string[] myArray2 = new string[count];
     int j = 0;
     for (int i = 0; i < myArray1.Length; i++)
@@ -32,7 +40,9 @@ void PrintArray(string[] array){
     }
     Console.Write(" ]");
 }
-string[] myArrayFinal=ElementsSelection(myArray1);
+
+int myCount=CountFunc(myArray1);
+string[] myArrayFinal=ElementsSelection(myArray1, myCount);
 PrintArray(myArray1);
  Console.Write($"-> ");
 PrintArray(myArrayFinal);
